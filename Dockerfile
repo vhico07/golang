@@ -19,6 +19,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o app .
 #   FROM alpine:3.7
 #   RUN apk --no-cache add ca-certificates
 #
+
 FROM scratch
 WORKDIR /root/
 COPY --from=builder /go/src/github.com/miguno/golang-docker-build-tutorial/app .
